@@ -26,9 +26,6 @@ save PropModel.mat
 save BatModel.mat
 save MotorModel.mat
 
-
-
 % Wa=200:1:600;
 % y=predictor(Wa',MotorModel);
 % plot(Wa,y(:,3))
-% 

@@ -28,13 +28,11 @@ save D.mat
 
 
 for i=1:1:1000
-    
-PropData=predictor(D(1,i),PropModel);
-BatData=predictor(D(2,i),BatModel);
-MotorData=predictor(D(4,i),MotorModel);
+  PropData=predictor(D(1,i),PropModel);
+  BatData=predictor(D(2,i),BatModel);
+  MotorData=predictor(D(4,i),MotorModel);
 
-LHf(i)=-((Vbat*D(2,i))/(4*(rho*PropData(3)*D(3,i)^3*D(1,i)^5)));
-
+  LHf(i)=-((Vbat*D(2,i))/(4*(rho*PropData(3)*D(3,i)^3*D(1,i)^5)));
 end
 
 figure

@@ -5,9 +5,6 @@ load PropModel.mat
 load BatModel.mat
 load MotorModel.mat
 
-
-
-
 lb_uav=[0.2032 1 1000/60 200];
 ub_uav=[0.3556 8 7000/60 600];
 
@@ -20,22 +17,13 @@ ub_gripper=[200 200 200 25 25];
 lb=[lb_uav, lb_manip, lb_gripper];
 ub=[ub_uav, ub_manip, ub_gripper]; 
 
-
-
-
-
 n=1000;
 p=12;
-
-
 
 X = lhsdesign(p,n);%'criterion','correlation');
 D = bsxfun(@plus,lb,bsxfun(@times,X,(ub-lb)));
 
 % save D.mat
-
-
-
 
 % for i=1:1:1000
 %     
@@ -70,11 +58,3 @@ D = bsxfun(@plus,lb,bsxfun(@times,X,(ub-lb)));
 % plot(D(4,:),LHf,'o')
 % axis([100 700 -50 0.5])
 % xlabel('Wm')
-% 
-% 
-% 
-% 
-% 
-% 
-% 
-% 
